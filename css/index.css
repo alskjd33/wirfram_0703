@@ -16,6 +16,50 @@ a {
   text-decoration: none;
   display: block;
 }
+/* 모달창 */
+.modal{
+  width: 100%;
+  height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+z-index:999999;
+background-color: rgba(0, 0, 0, 0.5);
+display: none;
+}
+.modal-wrap{
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+background-color: #fff;
+padding: 70px;
+text-align: center;
+
+}
+.modal-wrap p{
+  margin-top: 30px;
+  line-height: 1.5;
+}
+.modal-wrap h3{
+  margin-bottom: 30px;
+}
+/* 제이쿼리에서 클래스를 더해서 모달이보기게함 */
+.modal.active{
+  display: block;
+}
+.close{
+  padding: 10px 20px;
+  background-color: #585555;
+  width: 100px;
+  color: #fff;
+position: absolute;
+bottom: 30px;
+right: 30px;
+}
+/* 전체레이아웃 */
 .wrap {
   width: 100%;
 }
@@ -80,9 +124,9 @@ header {
    /* .navi > li:hover .submenu{
     display: block;
    } */
-   .navi:hover .submenu{
+   /* .navi:hover .submenu{
     display: block;
-   }
+   } */
   .submenu {
   position: relative;
     background-color: #feb2b2;
@@ -211,10 +255,52 @@ gap: 10px;
     width: 100%;
 }
 /* 배너/바로가기 */
+/* 배너 /바로가기 쌤이 한것
+.otherWrap {
+  width: calc(1200px - 395px);
+  display: flex;
+  background-color: #feb2b2;
+  position: relative;
+}
+.banner,
+.shortcut {
+  width: 50%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+.banner a ,.shortcut a{
+  position: relative;
+ height: 100%;
+
+}
+.banner a h4 , .shortcut a h4 {
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding:10px 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+.banner a img,.shortcut a img {
+  width: 100%;
+  height: 100%;
+} */
+
 .atherwrap {
   display: flex;
   position: relative;
 
+}
+.banner , .shortcut{
+  height: 200px;
+}
+.banner , .shortcut img{
+  height: 100%;
 }
 .banner{
     position:relative;
@@ -242,22 +328,83 @@ padding: 10PX 110PX;
 color: #fff;
 padding: 10PX 110PX;
 }
+/* 하단 */
+/* footer 쌤이한거 */
+/* .footer {
+  width: 100%;
+  height: 100px;
+  background-color: #117488;
+}
+.footer-inner {
+  width: 1200px;
+  height: 100%;
+  background-color: #ccc;
+  margin: auto;
+  display: flex;
+} */
+/* ftlogo */
+/* .ft-logo {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+}
+.ft-logo a {
+  width: 100%;
+  height: 100%;
+}
+.ft-logo a img {
+  width: 100%;
+  height: 100%;
+} */
+/* ft-site */
+/* .ft-site {
+  width: 1000px;
+  height: 100%;
+  background-color: #feb2b2;
+  text-align: center;
+}
+.ft-menu,
+.copy {
+  width: 100%;
+  height: 50px;
+  background-color: #664545;
+  color: #ccc;
+  font-size: 14px;
+}
+.ft-menu ul {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+.ft-menu ul li a{
+  font-size: 14px;
+  color: #ccc;
+}
+.copy{
+  line-height: 50px;
+} */
 .footer{
     width: 100%;
     background-color: #585555;
     position: relative;
+    height: 100px;
 }
 .footerwrap{
     display: flex;
     width:1200px;
+    height: 100%;
     margin: auto;
 background-color: rgb(47, 127, 247);
 }
+/* <!-- 하단로고 --> */
 .f-logo{
     width: calc(100% / 2);
     position: relative;
 }
 .f-logo img{
+  width: 30%;
 margin: 5px;
 position: absolute;
 top: -7px;
@@ -271,7 +418,10 @@ left: 50px;
 }
 .f-menu ul li{
     margin: 10px;
+    font-size: 14px;
 }
+/* 하단출처 */
 .copy{
-    margin: 10px
+    margin: 10px;
+    font-size: 14px;
 }
